@@ -56,8 +56,10 @@ input{
 }
 
 form p{
-    text-align: center;
-    font-size: 13px;
+    position: relative;
+    top: 36%;
+    text-align:center;
+    font-size: 12px;
 }
 
 form p a{
@@ -73,7 +75,7 @@ form p a{
 .btn-field button{
     position: absolute;
     left: 29%;
-    top: 80%;
+    top: 70%;
     flex-basis: 48%;
     background: #011126;
     color: #fff;
@@ -95,6 +97,17 @@ form p a{
 .input-group{
     height: 140px;
 }
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+  }
+  
 
 
 
