@@ -6,20 +6,20 @@
     <title>Login</title>
     <link rel="stylesheet" href="log.css">
 </head>
-<body>
+<body> 
     <div class="container">
         <img class="logo" src="adam.png" alt="Adamson">
         <div class="form-box">
-            <div id="error" class="error"></div>
+            <div id="error"></div>
             <form id="form" action="" method="POST">
                 <div class="input-group">
                     <div class="input-field">
                         <input id="idnum" name="idnum"
-                               type="number" placeholder="ID Number" required>
+                               type="text" placeholder="ID Number">
                     </div>
                     <div class="input-field">
                         <input id="password" name="password"
-                               type="password" placeholder="Password" required>
+                               type="password" placeholder="Password">
                     </div>
                     <p>Forgot password <a href="#">click here</a></p>
                 </div>
@@ -41,9 +41,9 @@
 
             if (idnum.value === '' || idnum.value === null) {
                 messages.push('ID number is required');
-            }
+            }   
 
-            if (password.value.length < 6) {
+            if (password.value.length < 6 || password.value.length === null) {
                 messages.push('Password must be at least 6 characters long');
             }
 
