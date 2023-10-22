@@ -98,15 +98,13 @@ form p a{
 }
 
 /* CSS for the error message */
-#error {
-    color: red;               /* Text color */
-    font-size: 14px;          /* Font size */
-    text-align: center;       /* Center the text */
-}
-
-/* CSS for input fields in error state */
-.input-field.error input {
-    border: 1px solid red;
+#error{
+    width: 345px;
+    font-size: 18px;
+    color: #c62828;
+    display: none;
+    text-align: center;
+    position: relative;
 }
 
 
