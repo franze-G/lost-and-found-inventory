@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retrieve Item</title>
-    <link rel="stylesheet" href="regist.css">
+    <link rel="stylesheet" href="retrieve.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
+            
         </div>
         <div class="menu">
         </div>
         <div class="search">
-            <h1 class="searchitm">Register Item</h1>
+            <h1 class="searchitm">Retrieve Item</h1>
             <div class="input-field">
                 <input type="text" name="fullname" id="fullname" placeholder="Full name">
             </div>
@@ -49,7 +50,7 @@
                 <input type="date" name="claimdate" id="claimdate" placeholder="Date of claim">
             </div>    
             <div class="btn-field">
-                    <button type="submit">Submit</button>
+                   <a href="termsandconditions.php"><button type="submit">Submit</button></a>
             </div>  
         </div>
     </div>

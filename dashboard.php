@@ -12,10 +12,10 @@
         <div class="header">
         </div>
         <ul class="nav">
-        <li><a href="#">Dashboard</a></li>
+        <li><a href="dashboard.php">Dashboard</a></li>
         <li><a href="#">Inventory</a></li>
-        <li><a href="">Retrieve Item</a></li>
-        <li><a href="#">Register Item</a></li>
+        <li><a href="retrieve.php">Retrieve Item</a></li>
+        <li><a href="register.php">Register Item</a></li>
         </ul>
         <div class="lostitems">
             <h1 class="lost">Lost items</h1>
