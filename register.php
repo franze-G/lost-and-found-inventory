@@ -49,7 +49,7 @@
                 <input type="date" name="claimdate" id="claimdate" placeholder="Date of claim">
             </div>    
             <div class="btn-field">
-                    <button type="submit">Submit</button>
+                    <button type="submit">SUBMIT</button>
             </div>  
         </div>
     </div>

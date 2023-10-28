@@ -18,8 +18,7 @@
             <h1 class="searchitm">Terms and Conditions</h1>
             <p class="terms">This is to certify that this item belongs to (name) and it will be recorded as claimed after submitting this form.</p>
             <div class="btn-field">
-                <!-- The following code creates a link to the current page, which is unnecessary. If you want to link to the same page, you can use "#" as the href attribute. -->
-                <a href="dashboard.php"><button type="button">Claim item</button></a>
+                <a href="dashboard.php"><button type="button">CLAIM AND SUBMIT</button></a>
             </div>
         </div>
     </div>

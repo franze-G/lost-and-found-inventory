@@ -50,7 +50,7 @@
                 <input type="date" name="claimdate" id="claimdate" placeholder="Date of claim">
             </div>    
             <div class="btn-field">
-                   <a href="termsandconditions.php"><button type="submit">Submit</button></a>
+                   <a href="termsandconditions.php"><button type="submit">SUBMIT</button></a>
             </div>  
         </div>
     </div>

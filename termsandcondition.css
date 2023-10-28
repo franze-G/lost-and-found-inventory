@@ -54,13 +54,13 @@
 
 .btn-field button{
     position: absolute;
-    left: 42%;
+    left: 22%;
     top: 86%;
-    flex-basis: 48%;
+    flex-basis: 58%;
     background: #011126;
     color: #fff;
     height: 40px;
-    width: 150px;
+    width: 90%;
     border-radius: 20px;
     border: 0;
     outline: 0;

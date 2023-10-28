@@ -47,7 +47,7 @@
     top: 38%;
     left: 68%;
     width: 90%;
-    height: 46%;
+    height: 48%;
     max-width: 300px;
     background:#fff;
     transform: translate(-50%,-50%);
@@ -84,9 +84,11 @@
 }
 
 .searchitm{
-    margin: -6px 10px;
+    position: absolute;
+    left: 108px;
+    top: 30px;
     color: #000;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 ul.nav {
@@ -104,20 +106,28 @@ ul.nav {
 
 ul.nav li {
     position: relative;
-	left: 24px;
+	left: 48px;
 	top: 120px;
   	display: block;
   	font-size: 20px;
-  	padding: 2px 10px;
+  	padding: 6px 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
 
 ul.nav li a {
-    
     text-decoration: none; 
-    color: white; 
+    color: #F3EFED; 
+}
+
+ul.nav li i{
+    color: #F3EFED;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -34px;
+    padding: 6px 10px;
 }
 
 .header{
@@ -179,3 +189,31 @@ input{
     background:#D9D9D9;
     color: #011126;
 }
+
+
+i.lost_item{   
+    color: #000;
+    position: absolute;
+    left: 34px;
+    top: 60px;
+    font-size: 30px;
+}
+
+
+i.found_item{   
+    color: #000;
+    position: absolute;
+    left: 34px;
+    top: 60px;
+    font-size: 30px;
+}
+
+i.search_item{   
+    color: #000;
+    position: absolute;
+    left: 76px;
+    top: 28px;
+    font-size: 24px;
+}
+
+                                           
