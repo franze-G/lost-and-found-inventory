@@ -5,14 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retrieve Item</title>
     <link rel="stylesheet" href="retrieve.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
+    
     <div class="container">
         <div class="header">
+        </div>
+        <ul class="nav">
+        <li>
+            <a href="dashboard.php"><i class="material-icons grid_view">grid_view</i></a>
+        </li>
+        <li>
+            <i class="material-icons grid_view">storage</i>
+            <a href="#"></a>
+        </li>
+        <li>
+        <a href="retrieve.php"><i class="material-icons grid_view">output</i></a>  
             
-        </div>
-        <div class="menu">
-        </div>
+        </li>
+        <li>
+            <a href="register.php"><i class="material-icons grid_view">library_add</i></a>
+        </li>
+        </ul>
+
         <div class="search">
             <h1 class="searchitm">Retrieve Item</h1>
             <div class="input-field">
@@ -50,7 +67,7 @@
                 <input type="date" name="claimdate" id="claimdate" placeholder="Date of claim">
             </div>    
             <div class="btn-field">
-                   <a href="termsandconditions.php"><button type="submit">SUBMIT</button></a>
+                    <button type="submit">Submit</button>
             </div>  
         </div>
     </div>
