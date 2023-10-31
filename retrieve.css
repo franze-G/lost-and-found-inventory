@@ -41,9 +41,14 @@
 }
 
 .searchitm{
-    margin: -6px 10px;
     color: #000;
     font-size: 24px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 10px;
+    left: 440px;
+    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 .input-field{
@@ -52,7 +57,7 @@
     height: 12%;
     background: #D9D9D9;
     margin: 10px 20px;
-    margin-top: 30px;
+    margin-top: 40px;
     border-radius: 16px;
     display: inline-block;
     align-items: left;
@@ -87,6 +92,8 @@ input{
     outline: 0;
     cursor: pointer;
     transition: background 1s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
 }
 
 .btn-field button:hover {
@@ -143,3 +150,87 @@ ul.nav li i{
     top: 0;
     left: 30px;
 }
+.input-field
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  border-radius: 16px;
+  height: 42px;
+  margin: 2px -4px;
+  width: 100%;
+  max-width: 100%;
+  background:transparent;
+  border: 0;
+  outline: 0;
+  padding: 6px 10px;
+}
+.input-field input :focus,
+.input-field select:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.labels{
+    position: absolute;
+    top: 70px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 2px 34px;
+    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.labelss{
+    position: absolute;
+    top: 150px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 18px -268px;
+    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.labe{
+    position: absolute;
+    top: 150px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 114px -268px;
+    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lab{
+    position: absolute;
+    top: 168px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 190px -868px;
+    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#fileupload{
+    position: absolute;
+    top: 450px;
+    left: 210px;
+    color: #333;
+    padding: 10px;
+    width: 200px;
+  }
+
+  .input-fields{
+    max-width: 100%;
+    width: 26%;
+    height: 12%;
+    background: #D9D9D9;
+    margin: -50px 64px;
+    margin-top: 40px;
+    border-radius: 16px;
+    align-items: left;
+}
+
+
+

@@ -1,3 +1,14 @@
+<?php
+    include "config.php";
+
+    if(isset($_POST['submit'])){
+
+        $category = $_POST['category'];
+    }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +98,7 @@
                 <input type="file" name="fileupload" id="fileupload">
 
             <div class="btn-field">
-                    <button type="submit">SUBMIT</button>
+                    <button type="submit" name="submit">SUBMIT</button>
             </div>  
         </div>
     </div>
