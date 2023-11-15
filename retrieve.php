@@ -18,8 +18,7 @@
             <a href="dashboard.php"><i class="material-icons grid_view">grid_view</i></a>
         </li>
         <li>
-            <i class="material-icons grid_view">storage</i>
-            <a href="#"></a>
+        <a href="inventory.php"><i class="material-icons grid_view">storage</i></a>
         </li>
         <li>
         <a href="retrieve.php"><i class="material-icons grid_view">output</i></a>  
@@ -53,8 +52,8 @@
             <div class="input-field">
                 <select name="item-type"  placeholder="Category of item">
                     <option value="" disabled selected>Select category of item</option>
-                    <option value="valuable">Valuable</option>
-                    <option value="non-valuable">Non-Valuable</option>
+                    <option value="valuable">VALUABLE</option>
+                    <option value="non-valuable">NON-VALUABLE</option>
                 </select>
             </div>
             <label class="labelss">Category</label>
@@ -81,7 +80,7 @@
             </div>
 
             <div class="btn-field">
-                    <button type="submit">SUBMIT</button>
+                    <input type="submit" name="submit" value="RETRIEVE ITEM">
             </div>  
         </div>
     </div>

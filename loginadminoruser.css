@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Font+Name");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: rgb(217,217,217);
+    background: linear-gradient(180deg, rgba(217,217,217,1) 0%,
+             rgba(1,17,38,1) 100%);
+    
+}
+
+.logo{
+    height: 150px;
+    width: 150px;
+    position:absolute;
+    top: 12%;
+    left: 614px;
+    z-index: 1;
+}
+
+
+.search{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 50%;
+    max-width: 100%;
+    background:#fff;
+    transform: translate(-50%,-50%);
+    padding: 50px 50px 70px;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    opacity: 76%;
+}
+
+/*.nav {
+    /* Your CSS styles for the ul element with the class "nav" here
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+    background:#d9d9d9;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 20px 0px; 
+}
+
+.nav a {
+    position: relative;
+	left: -70%;
+	top: 6%;
+  	display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 60px 26px;
+}
+
+.nav a {
+    text-decoration: none; 
+    color: #011126; 
+    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: none; 
+    color: #fff;
+    background: #011126;
+    border-radius: 16px; 
+    padding: 60px 60px 10px 20px;
+    margin: -2px -2px;
+    text-align: center;
+    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 1s;
+
+}
+
+.nav i{
+    color: #011126;
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 29px;
+    font-size: 40px;
+}
+
+.nav i:hover{
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 29px;
+    font-size: 40px;
+}
+
+
+ul.navs {
+    /* Your CSS styles for the ul element with the class "nav" here 
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    width: 80px;
+    height: 80px;
+    background:#d9d9d9;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 20px 0px; /* Remove list bullet points 
+}
+*/
+
+/* Basic styling for the navigation */
+.nav, .navs {
+    display: inline-block;
+    margin: 30px;
+    margin-top: 100px;  
+ 
+}
+
+/* Styling for the links */
+.nav a, .navs a {
+    text-decoration: none;
+    color: #011126;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    height: 90px;
+    width: 90px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+/* Adding some spacing between the icon and text */
+.nav i, .navs i {
+    margin: 10px;
+    text-decoration: none;
+    margin-left: -2px;
+}
+
+/* Hover effect */
+.nav a:hover, .navs a:hover {
+    background: #011126;
+    color: white;
+}
+
+/* Styling for the material icons */
+.material-icons {
+    font-family: 'Material Icons';
+    font-size: 26px;
+}
+
+
+
+
+.title{
+    position: absolute;
+    top: 40%;
+    left: 534px;
+    font-size: 22px;
+    z-index: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+
+}

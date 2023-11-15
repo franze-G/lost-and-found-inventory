@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=deviceq-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="user.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -16,10 +16,6 @@
         <ul class="nav">
         <li>
             <a href="dashboard.php"><i class="material-icons grid_view">grid_view</i>Dashboard</a>
-        </li>
-        <li>
-        <a href="inventory.php"> <i class="material-icons grid_view">storage</i> Inventory</a>
-      
         </li>
         <li>
         <a href="retrieve.php"><i class="material-icons grid_view">output</i>Retrieve Item</a>  

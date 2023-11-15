@@ -12,17 +12,17 @@
         <img class="logo" src="adam.png" alt="Adamson">
         <div class="form-box">
             <div id="error"></div>
-            <form action="login_func.php" method="post">
+            <form action="functions.php" method="post">
                 <div class="input-group">
                     <div class="input-field">
                         <input id="idnum" name="idnum"
                                type="text" placeholder="ID Number">
-                            <div id="idnum_error" required></div>
+                            <div id="idnum_error"></div>
                     </div>
                     <div class="input-field">
                         <input id="password" name="password"
                                type="password" placeholder="Password">
-                               <div id="pass_error" required></div>
+                               <div id="pass_error"></div>
                     </div>
                     <div class="error">
                         <?php
@@ -30,7 +30,7 @@
                             if ($_GET["error"] === "emptyinput") {
                                 echo '<div style="color:red;">Please Fill in All Details</div>';
                             } else if ($_GET["error"] === "wronglogin") {
-                                echo '<div style="color:red; postion=absolute top=10px;" >Incorrect Login Details</div>';
+                                echo '<div style="color:red;">Incorrect Login Details</div>';
                             }
                         }
                         ?>

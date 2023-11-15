@@ -1,3 +1,7 @@
+<?php
+   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +22,8 @@
             <a href="dashboard.php"><i class="material-icons grid_view">grid_view</i></a>
         </li>
         <li>
-            <i class="material-icons grid_view">storage</i>
-            <a href="#"></a>
+        <a href="inventory.php"><i class="material-icons grid_view">storage</i></a>
+           
         </li>
         <li>
         <a href="retrieve.php"><i class="material-icons grid_view">output</i></a>  
@@ -32,6 +36,7 @@
 
         <div class="search">
             <h1 class="searchitm">Register Item</h1>
+            <form action ="reg.php" method="post" enctype="multipart/form-data">
             <label class="labels">Fullname</label>
             <div class="input-field">
                 <input type="text" name="fullname" id="fullname" placeholder="Full name">
@@ -53,8 +58,8 @@
             <div class="input-field">
                 <select name="item-type"  placeholder="Category of item">
                     <option value="" disabled selected>Select category of item</option>
-                    <option value="valuable">Valuable</option>
-                    <option value="non-valuable">Non-Valuable</option>
+                    <option value="valuable">VALUABLE</option>
+                    <option value="non-valuable">NON-VALUABLE</option>
                 </select>
             </div>
             <label class="labelss">Category of Item</label>
@@ -79,16 +84,16 @@
             <div class="input-fields">
                 <select name="item-type"  placeholder="Category of item">
                     <option value="" disabled selected>Select status</option>
-                    <option value="valuable">Lost</option>
-                    <option value="non-valuable">Found</option>
+                    <option value="valuable">LOST</option>
+                    <option value="non-valuable">FOUND</option>
                 </select>
             </div>
-            <label class="labs">Upload image here</label>
-                <input type="file" name="fileupload" id="fileupload">
+            
 
             <div class="btn-field">
-                    <button type="submit">SUBMIT</button>
-            </div>  
+                    <input type="submit" name="submit" value="REGISTER">
+            </div> 
+            </form> 
         </div>
     </div>
 </body>

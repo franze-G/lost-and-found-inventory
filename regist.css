@@ -72,16 +72,10 @@ input{
     padding: 16px 10px;
 }
 
-.btn-field{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn-field button{
+.btn-field input{
     position: absolute;
     left: 42%;
-    top: 86%;
+    top: 88%;
     flex-basis: 48%;
     background: #011126;
     color: #fff;
@@ -92,14 +86,21 @@ input{
     outline: 0;
     cursor: pointer;
     transition: background 1s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bolder;
+    text-align: center;
+    padding: 4px 4px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.btn-field button:hover {
+.btn-field input:hover {
     background:#D9D9D9;
     color: #011126;
 }
+
+.input-group{
+    height: 140px;
+}
+
 
 .header{
     position: relative;

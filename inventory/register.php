@@ -2,11 +2,34 @@
     include "config.php";
 
     if(isset($_POST['submit'])){
-
+        
+        $fullname = $_POST['fullname'];
+        $studentnum = $_POST['studentnum'];
+        $course = $_POST['course'];
         $category = $_POST['category'];
-    }
+        $itemname = $_POST['itemname'];
+        $itemtype = $_POST['itemtype'];
+        $color = $_POST['color'];
+        $surrenderdate = $_POST['surrenderdate'];
+        $lostdate = $_POST['lostdate'];
+        $registerdate = $_POST['registerdate'];
+        $status = $_POST['status'];
+        
 
+        $sql = "INSERT INTO 'register' ('category','itemname','itemtype','color','surrenderdate',
+                'claimdate','lostdate','registerdate','status') VALUES ('$category','$itemname','
+                $itemtype','$color','$surrenderdate','$claimdate','$lostdate','$registerdate','$status')";
 
+                $result = $conn->query($sql);
+
+                if($result === TRUE ){
+                    echo "Item successfully submitted";
+                } else{
+                    echo "Error:" . $sql ."<br>" . $conn->error;
+                }
+
+                $conn->close();
+    }    
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +40,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="regist.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="validation.js"></script>
 
 </head>
 <body>
@@ -42,6 +66,7 @@
         </ul>
 
         <div class="search">
+            <form action="" method="POST">
             <h1 class="searchitm">Register Item</h1>
             <label class="labels">Fullname</label>
             <div class="input-field">
@@ -58,7 +83,7 @@
             
             <label class="labelss">Item name</label>
             <div class="input-field">
-                <input type="text" name="type" id="type" placeholder="type of item">
+                <input type="text" name="itemtype" id="type" placeholder="type of item">
             </div>
             <label class="labelss">Type of Item</label>
             <div class="input-field">
@@ -75,11 +100,11 @@
 
             <label class="labe">Date of Lost</label>
             <div class="input-field">
-                <input type="text" name="name" id="fullname" placeholder="Item color">
+                <input type="text" name="lostdate" id="fullname" placeholder="Item color">
             </div>
             <label class="labe">Item Color</label>
             <div class="input-field">
-                <input type="date" name="lostdate" id="lostdate" value="Date of Lost">
+                <input type="date" name="color" id="lostdate" value="Date of Lost">
             </div>
             <label class="labe">Date of Register</label>
             <div class="input-field">
@@ -98,8 +123,9 @@
                 <input type="file" name="fileupload" id="fileupload">
 
             <div class="btn-field">
-                    <button type="submit" name="submit">SUBMIT</button>
+                    <button type="submit" name="submit" value="submit">SUBMIT</button>
             </div>  
+            </form>
         </div>
     </div>
 </body>
