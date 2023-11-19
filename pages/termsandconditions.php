@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms and Conditions</title>
-    <link rel="stylesheet" href="termsandcondition.css">
+    <link rel="stylesheet" href="../styles/termsandcondition.css">
 </head>
 <body>
     <div class="container">

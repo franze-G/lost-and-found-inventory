@@ -1,5 +1,5 @@
 <?php
-    include "config.php";
+    include ('../configuration/config.php');
     $sql = "SELECT * FROM register ORDER BY id ASC";
 
     $result = $conn->query($sql);
@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INVENTORY</title>
-    <link rel="stylesheet" href="invent.css">
+    <link rel="stylesheet" href="../styles/invent.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
