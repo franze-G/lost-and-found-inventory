@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Font+Name");
 *{
     margin: 0;
     padding: 0;
@@ -215,5 +216,30 @@ i.search_item{
     top: 28px;
     font-size: 24px;
 }
+
+/* Your existing styles */
+
+.lost_count {
+    position: absolute;
+    top: 20px;
+    left: 216px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 56px; /* Adjust as needed */
+    color: #ff0000; /* Adjust text color as needed */
+    font-weight: 500;
+}
+
+.found_count {
+    position: absolute;
+    top: 22px;
+    left: 216px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 56px; /* Adjust as needed */
+    color: #007F42; /* Adjust text color as needed */
+    font-weight: 500;
+}
+
+/* Additional styles or adjustments as needed */
+
 
                                            

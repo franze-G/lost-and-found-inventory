@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2023 at 07:16 AM
+-- Generation Time: Nov 27, 2023 at 09:42 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,47 +18,50 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `lost_and_found_invdb`
+-- Database: `login`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_details`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `user_details` (
-  `user_id` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `fullname` varchar(200) NOT NULL,
+  `student_number` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `course` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user_details`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user_details` (`user_id`, `username`, `password`) VALUES
-(1, '202014886', 'ryu12345');
+INSERT INTO `user` (`id`, `fullname`, `student_number`, `email`, `course`) VALUES
+(43, 'FRANZE GARCIA', '202119379', 'franze@gmail.com', 'BS CPSCI'),
+(44, 'RJ CRUZ', '202014886', 'rj@gmail.com', 'BS CPSCI');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `user_details`
+-- Indexes for table `user`
 --
-ALTER TABLE `user_details`
-  ADD PRIMARY KEY (`user_id`);
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `user_details`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `user_details`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

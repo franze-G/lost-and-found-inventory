@@ -19,7 +19,7 @@
     top: 54%;
     left: 52%;
     width: 80%;
-    height: 80%;
+    height: 60%;
     max-width: 100%;
     background:#fff;
     transform: translate(-50%,-50%);
@@ -47,8 +47,8 @@
     font-size: 24px;
     padding: 10px 20px;
     position: absolute;
-    top: 10px;
-    left: 440px;
+    top: 20px;
+    left: 390px;
     font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -58,8 +58,8 @@
     width: 26%;
     height: 12%;
     background: #D9D9D9;
-    margin: 10px 20px;
-    margin-top: 40px;
+    margin: -10px 20px;
+    margin-top: 66px;
     border-radius: 16px;
     display: inline-block;
     align-items: left;
@@ -77,7 +77,7 @@ input{
 .btn-field input{
     position: absolute;
     left: 42%;
-    top: 88%;
+    top: 82%;
     flex-basis: 48%;
     background: #011126;
     color: #fff;
@@ -98,6 +98,12 @@ input{
     background:#D9D9D9;
     color: #011126;
 }
+
+.input-group{
+    height: 140px;
+}
+
+
 .header{
     position: relative;
     top:0;
@@ -170,7 +176,7 @@ select {
 
 .labels{
     position: absolute;
-    top: 70px;
+    top: 90px;
     font-size: 12px;
     font-weight: bold;
     display: inline-block;
@@ -180,7 +186,7 @@ select {
 
 .labelss{
     position: absolute;
-    top: 150px;
+    top: 180px;
     font-size: 12px;
     font-weight: bold;
     display: inline-block;
@@ -198,35 +204,64 @@ select {
     font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.lab{
-    position: absolute;
-    top: 168px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 190px -868px;
-    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
 #fileupload{
     position: absolute;
-    top: 450px;
-    left: 210px;
+    top: 380px;
+    left: 750px;
     color: #333;
     padding: 10px;
     width: 200px;
   }
 
-  .input-fields{
+.lab{
+    position: absolute;
+    top: 364px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0px -420px 120px;
+    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.labs{
+    position: absolute;
+    top: 174px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 190px -114px;
+    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.input-fields{
+    position: relative;
+    left: -150px;
     max-width: 100%;
     width: 26%;
     height: 12%;
     background: #D9D9D9;
-    margin: -50px 64px;
+    margin: 10px 20px;
     margin-top: 40px;
+    display: inline-block;
     border-radius: 16px;
     align-items: left;
+}
+
+.input-fields
+select {
+  outline: none;
+  font-size: 14px;
+  color: #000;
+  background: #D9D9D9;
+  border-radius: 16px;
+  height: 42px;
+  margin: 2px -68px;
+  width: 100%;
+  max-width: 100%;
+  background:transparent;
+  border: 0;
+  outline: 0;
+  padding: 6px 10px;
 }
 
 

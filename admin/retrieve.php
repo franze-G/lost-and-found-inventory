@@ -1,14 +1,10 @@
-<?php
-   
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="../styles/regist.css">
+    <title>Retrieve Item </title>
+    <link rel="stylesheet" href="../styles/retrieve.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -23,7 +19,6 @@
         </li>
         <li>
         <a href="inventory.php"><i class="material-icons grid_view">storage</i></a>
-           
         </li>
         <li>
         <a href="retrieve.php"><i class="material-icons grid_view">output</i></a>  
@@ -32,11 +27,13 @@
         <li>
             <a href="register.php"><i class="material-icons grid_view">library_add</i></a>
         </li>
+        <li>
+            <a href="account.php"><i class="material-icons grid_view">person_add</i></a>
+        </li>
         </ul>
 
         <div class="search">
-            <h1 class="searchitm">Register Item</h1>
-            <form action ="reg.php" method="post" enctype="multipart/form-data">
+            <h1 class="searchitm">Retrieve Item</h1>
             <label class="labels">Fullname</label>
             <div class="input-field">
                 <input type="text" name="fullname" id="fullname" placeholder="Full name">
@@ -49,8 +46,8 @@
             <div class="input-field">
                 <input type="text" name="course" id="Course" placeholder="Course">
             </div>
-            
-            <label class="labelss">Item name</label>
+
+            <label class="labelss">Item Name</label>
             <div class="input-field">
                 <input type="text" name="type" id="type" placeholder="type of item">
             </div>
@@ -62,7 +59,7 @@
                     <option value="non-valuable">NON-VALUABLE</option>
                 </select>
             </div>
-            <label class="labelss">Category of Item</label>
+            <label class="labelss">Category</label>
             <div class="input-field">
                 <input type="text" name="itemname" id="itemname" placeholder="Item name">
             </div>
@@ -80,20 +77,14 @@
                 <input type="date" name="registerdate" id="registerdate" placeholder="Date registered">
             </div>
 
-            <label class="lab">Status</label>
+            <label class="lab">Date of Claim</label>
             <div class="input-fields">
-                <select name="item-type"  placeholder="Category of item">
-                    <option value="" disabled selected>Select status</option>
-                    <option value="valuable">LOST</option>
-                    <option value="non-valuable">FOUND</option>
-                </select>
+                <input type="date" name="registerdate" id="registerdate" placeholder="Date registered">
             </div>
-            
 
             <div class="btn-field">
-                    <input type="submit" name="submit" value="REGISTER">
-            </div> 
-            </form> 
+                    <input type="submit" name="submit" value="RETRIEVE ITEM">
+            </div>  
         </div>
     </div>
 </body>

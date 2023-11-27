@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Font+Name");
 *{
     margin: 0;
     padding: 0;
@@ -27,18 +28,6 @@
     box-shadow: -4px 10px 20px 0px #808080;
 }
 
-.menu{
-    position: absolute;
-    top: 50%;
-    left: 2%;
-    width: 4%;
-    height: 100%;
-    max-width: 100%;
-    background:#011126;
-    transform: translate(-50%,-50%);
-    padding: 0px 0px 0px;
-    text-align: center;
-}
 
 .searchitm{
     color: #000;
@@ -118,7 +107,7 @@ ul.nav {
     top: 50%;
     left: 0;
     width: 7%;
-    height: 100%;
+    height: 112%;
     max-width: 16%;
     background:#011126;
     transform: translate(-50%,-50%);
@@ -152,65 +141,25 @@ ul.nav li i{
 }
 .input-field
 select {
-  outline: none;
-  font-size: 14px;
-  font-weight: 400;
-  color: #000;
-  border-radius: 16px;
-  height: 42px;
-  margin: 2px -4px;
-  width: 100%;
-  max-width: 100%;
-  background:transparent;
-  border: 0;
-  outline: 0;
-  padding: 6px 10px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    border-radius: 16px;
+    height: 42px;
+    margin: 2px -4px;
+    width: 100%;
+    max-width: 100%;
+    background:transparent;
+    border: 0;
+    outline: 0;
+    padding: 6px 10px;
 }
+
 .input-field input :focus,
 .input-field select:focus {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
 }
-
-.labels{
-    position: absolute;
-    top: 70px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 2px 34px;
-    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.labelss{
-    position: absolute;
-    top: 150px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 18px -268px;
-    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.labe{
-    position: absolute;
-    top: 150px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 114px -268px;
-    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.lab{
-    position: absolute;
-    top: 150px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 190px -868px;
-    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
-}
-
 
 #fileupload{
     position: absolute;
@@ -221,55 +170,6 @@ select {
     width: 200px;
   }
 
-  .lab{
-    position: absolute;
-    top: 168px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 190px -868px;
-    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
-.labs{
-    position: absolute;
-    top: 168px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 190px -90px;
-    font-family: Poppins,Verdana, Geneva, Tahoma, sans-serif;
-}
-
-  .input-fields{
-    max-width: 100%;
-    width: 26%;
-    height: 12%;
-    background: #D9D9D9;
-    margin: -50px 64px;
-    margin-top: 40px;
-    border-radius: 16px;
-    align-items: left;
-}
-
-.input-fields
-select {
-  outline: none;
-  font-size: 14px;
-  color: #000;
-  background: #D9D9D9;
-  border-radius: 16px;
-  height: 42px;
-  margin: 2px -68px;
-  width: 100%;
-  max-width: 100%;
-  background:transparent;
-  border: 0;
-  outline: 0;
-  padding: 6px 10px;
-}
-
 .title{
     position: absolute;
     top: 70px;
@@ -277,7 +177,6 @@ select {
 }
 
 /* invent.css */
-
 /* Style the table */
 .items {
     width: 95%;
@@ -298,8 +197,9 @@ select {
 .items th {
     padding: 10px;
     margin: 2px;
-    font-family: Poppins, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
 
 }
 
@@ -313,13 +213,25 @@ select {
     padding: 10px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 }
 
 /* Define hover effect on rows */
 .items tbody tr:hover {
-    background-color: #ddd; /* Hover row background color */
+    background-color:#011126;
+    color: #D9D9D9;
+    cursor: pointer;/* Hover row background color */
+}
+
+.items tbody tr:nth-child(even){
+    background-color: #D9D9D9;
+}
+
+
+.items tbody tr:nth-child(even):hover{
+    background-color:#011126;
+    color: #D9D9D9;
 }
 
 /* Add this CSS to your stylesheet or in a <style> tag in your HTML file */
@@ -333,9 +245,72 @@ a.retrieve {
     border-radius: 16px;
     transition: background-color 0.3s;
     font-size: 10px;
-    font-weight: bold;
+    font-weight: 400;
+
 }
 
 a.retrieve:hover {
     background-color: #45a049; /* Darker green on hover */
+}
+
+/* Add the following style for red text on "LOST" status */
+.items tbody tr td.status-lost {
+    color: red;
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Add the following style for green text on "FOUND" status */
+.items tbody tr td.status-found {
+    color: green;
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a.details{
+    text-decoration: none;
+    color: #011126;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a.details:hover{
+    color: #D9D9D9;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    top: 6px;
+    left: 20px;
+    margin: 50px 40px;
+    padding: 4px; /* Adjust as needed */
+}
+
+.dataTables_filter input {
+    position: relative;
+    top: -4px;
+    width: 150px;
+    border-radius: 14px; /* Adjust as needed */
+}
+
+.dataTables_length select {
+    width: 80px; 
+    position: relative;
+    top: -4px;
+    left: 2px;/* Adjust as needed */
+}
+
+.dataTables_paginate {
+    position: relative;
+    top: 2px;
+    font-size: 14px; /* Adjust as needed */
+}
+
+.dataTables_info {
+    position: relative;
+    top: 2px;
+    font-size: 14px; /* Adjust as needed */
 }
