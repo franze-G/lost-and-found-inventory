@@ -3,6 +3,37 @@
     $sql = "SELECT * FROM register ORDER BY id ASC";
 
     $result = $conn->query($sql);
+
+    
+    if(isset($_COOKIE['token'])){
+        $id=$_COOKIE['token'];
+        $sql ="SELECT account.*, user.fullname
+               FROM account 
+               JOIN user ON account.id = user.id 
+               WHERE account.id=$id";
+        if($rs=$conn->query($sql)){
+          if($rs->num_rows>0){
+            $row=$rs->fetch_assoc();
+            $usertype=$row['user_type'];
+            $userid=$row['id'];
+            $fname=$row['fullname']; // Add this line to get the user's first name
+      // Add this line to get the user's last name
+            switch($usertype){
+              case 1 : header("location:"); break;
+              //case 1 : header("location:staff_dash.php"); break;
+              //case 2 : header("location:guest_dash.php"); break;
+            }
+          }else{
+              //token not exist
+              header("location:login.php");
+          }
+        }
+        else{
+            echo $conn->error;
+        }
+      }else{
+          header("location:login.php");
+      }
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +52,9 @@
 <body>
     
     <div class="container">
-    <div class="header">
+        <div class="header">
+        <p class="stats">Admin</p>
+        <p><?php echo $fname; ?> </p>
         </div>
         <h2 class="title">Inventory</h2>
         <table class="items" id="table">

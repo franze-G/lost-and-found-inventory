@@ -1,5 +1,5 @@
 <?php   
-    include('../configuration/login.php');
+    include('../configuration/config.php');
 
     $msg = '';
 
@@ -15,7 +15,7 @@
                 header("location:dashboard.php");
                 break;
             case 2:
-                header("location:../student/user.php");
+                header("location:user.php");
                 break;
         }
     } else {
@@ -44,7 +44,7 @@
                             header("location:dashboard.php");
                             exit();
                         case 2:
-                            header("location:../student/user.php");
+                            header("location:user.php");
                             exit();
                     }
                 } else {

@@ -21,7 +21,7 @@
 
         if ($result === TRUE) {
             echo "Record successfully submitted.";
-            header("Location: ../pages/inventory.php");
+            header("Location: ../admin/inventory.php");
             exit();
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;

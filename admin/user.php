@@ -78,31 +78,27 @@
     
     <div class="container">
         <div class="header">
-        <p class="title">Admin</p>
-        <p><?php echo strtoupper($fname); ?> </p>
+        <p class="title">Student</p>
+        <p><?php echo $fname; ?> </p>
         </div>
 
         <ul class="nav">
         <li>
-            <a href="dashboard.php"><i class="material-icons grid_view">grid_view</i>Dashboard</a>
+            <a href="user.php"><i class="material-icons grid_view">grid_view</i>Dashboard</a>
         </li>
 
         <li>
-        <a href="inventory.php"> <i class="material-icons grid_view">storage</i> Inventory</a>
+        <a href="../student/UInventory.php"> <i class="material-icons grid_view">storage</i> Inventory</a>
       
         </li>
 
         <li>
-        <a href="retrieve.php"><i class="material-icons grid_view">output</i>Retrieve Item</a>  
+        <a href="../student/Uretrieve.php"><i class="material-icons grid_view">output</i>Retrieve Item</a>  
             
         </li>
 
         <li>
-            <a href="register.php"><i class="material-icons grid_view">library_add</i>Register Item</a>
-        </li>
-
-        <li>
-            <a href="account.php"><i class="material-icons grid_view">person_add</i>New Account</a>
+            <a href="../student/Uregister.php"><i class="material-icons grid_view">library_add</i>Register Item</a>
         </li>
 
         <li>
