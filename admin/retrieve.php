@@ -34,23 +34,30 @@
 
         <div class="search">
             <h1 class="searchitm">Retrieve Item</h1>
+
+            <form action ="../configuration/reg.php" method="post" enctype="multipart/form-data">
+
+
             <label class="labels">Fullname</label>
             <div class="input-field">
-                <input type="text" name="fullname" id="fullname" placeholder="Full name">
-            </div>
-            <label class="labels">Student number</label>
-            <div class="input-field">
-                <input type="text" name="studentnum" id="studentnum" placeholder="Student number">
-            </div>
-            <label class="labels">Course</label>
-            <div class="input-field">
-                <input type="text" name="course" id="Course" placeholder="Course">
+                <input type="text" name="fullname" id="fullname" placeholder="Enter Fulname">
             </div>
 
-            <label class="labelss">Item Name</label>
+            <label class="labels">Student number</label>
             <div class="input-field">
-                <input type="text" name="type" id="type" placeholder="type of item">
+                <input type="text" name="studentnum" id="studentnum" placeholder="Enter Student number">
             </div>
+
+            <label class="labels">Serial Number</label>
+            <div class="input-field">
+                <input type="text" name="serial" id="serial" placeholder="Enter serial number">
+            </div>
+
+            <label class="labelss">Item Color</label>
+            <div class="input-field">
+                <input type="text" name="type" id="type" placeholder="Enter type of item">
+            </div>
+
             <label class="labelss">Type of Item</label>
             <div class="input-field">
                 <select name="item-type"  placeholder="Category of item">
@@ -59,32 +66,32 @@
                     <option value="non-valuable">NON-VALUABLE</option>
                 </select>
             </div>
+
             <label class="labelss">Category</label>
             <div class="input-field">
-                <input type="text" name="itemname" id="itemname" placeholder="Item name">
+                <input type="text" name="itemname" id="itemname" placeholder="Enter color">
+            </div>
+
+            <label class="labe">Date of Claim</label>
+            <div class="input-field">
+                <input type="email" name="email" id="email" value="Enter Email">
+            </div>
+
+            <label class="labe">Email</label>
+            <div class="input-field">
+                <input type="date" name="lostdate" id="lostdate" value="Date of Lost">
             </div>
 
             <label class="labe">Date of Lost</label>
             <div class="input-field">
-                <input type="text" name="name" id="fullname" placeholder="Item color">
-            </div>
-            <label class="labe">Item Color</label>
-            <div class="input-field">
                 <input type="date" name="lostdate" id="lostdate" value="Date of Lost">
             </div>
-            <label class="labe">Date of Register</label>
-            <div class="input-field">
-                <input type="date" name="registerdate" id="registerdate" placeholder="Date registered">
-            </div>
 
-            <label class="lab">Date of Claim</label>
-            <div class="input-fields">
-                <input type="date" name="registerdate" id="registerdate" placeholder="Date registered">
-            </div>
 
             <div class="btn-field">
                     <input type="submit" name="submit" value="RETRIEVE ITEM">
-            </div>  
+            </div> 
+            </form> 
         </div>
     </div>
 </body>

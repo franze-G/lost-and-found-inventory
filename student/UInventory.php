@@ -28,6 +28,7 @@
             <thead>
                 <tr>
                     <th>Item ID</th>
+                    <th>Serial NO.</th>
                     <th>Category</th>
                     <th>Item name</th>
                     <th>Type of Item</th>
@@ -45,9 +46,12 @@
                         while ($row = $result->fetch_assoc()){
                             // Determine the class based on status for styling
                             $statusClass = ($row['status'] == 'LOST') ? 'status-lost' : (($row['status'] == 'FOUND') ? 'status-found' : '');
+                            $firstPart = str_repeat('*', strlen($row['serial']) - 3);
+                            $lastThreeDigits = substr($row['serial'], -3);
 
                             echo '<tr>';
                             echo '<td>' . $row['id'] . '</td>';
+                            echo '<td>' . $firstPart . $lastThreeDigits . '</td>';
                             echo '<td>' . $row['category'] . '</td>';
                             echo '<td>' . $row['itemname'] . '</td>';
                             echo '<td>' . $row['itemtype'] . '</td>';

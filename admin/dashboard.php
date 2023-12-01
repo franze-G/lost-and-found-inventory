@@ -106,6 +106,10 @@
         </li>
 
         <li>
+            <a href="account.php"><i class="material-icons grid_view">report</i>Report Item</a>
+        </li>
+
+        <li>
             <a href="logout.php"><i class="material-icons grid_view">logout</i>Logout</a>
         </li>
         </ul>
