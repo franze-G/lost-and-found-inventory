@@ -93,11 +93,6 @@
         </li>
 
         <li>
-        <a href="retrieve.php"><i class="material-icons grid_view">output</i>Retrieve Item</a>  
-            
-        </li>
-
-        <li>
             <a href="register.php"><i class="material-icons grid_view">library_add</i>Register Item</a>
         </li>
 
