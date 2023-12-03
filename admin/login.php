@@ -48,10 +48,10 @@
                             exit();
                     }
                 } else {
-                    $msg = 'Invalid password';
+                    $msg = 'Invalid Password';
                 }
             } else {
-                $msg = 'Invalid username';
+                $msg = 'Invalid Username';
             }
         } else {
             echo $conn->error;
@@ -59,6 +59,10 @@
         $stmt->close();
     } else {
         echo $conn->error;
+    }
+
+    if (isset($msg)){
+        echo $msg;
     }
 }
 ?>
