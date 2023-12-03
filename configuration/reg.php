@@ -1,3 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Popup</title>
+
+    <style>
+        /* Style for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            background-color: #f44336;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
 <?php
     include ('config.php');
 
@@ -32,14 +72,37 @@
         $result = $conn->query($sql);
 
         if ($result === TRUE) {
-            echo "Record successfully submitted. Serial Number: $serialNumber";
+            // Display the modal with the success message and serial number
+            echo '<div id="registrationModal" class="modal">';
+            echo '<div class="modal-content">';
+            echo '<p>Record successfully submitted. Serial Number: ' . $serialNumber . '</p>';
+            echo '<button class="close-btn" onclick="closeModal()">Close</button>';
+            echo '</div>';
+            echo '</div>';
+            echo '<script>document.getElementById("registrationModal").style.display = "flex";</script>';
+
             // Optionally, you can redirect after a delay
             echo '<meta http-equiv="refresh" content="3;url=../admin/inventory.php" />';
-            // or provide a link/button to go back to the inventory page
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            // Display the modal with the error message
+            echo '<div id="registrationModal" class="modal">';
+            echo '<div class="modal-content">';
+            echo '<p>Error: ' . $conn->error . '</p>';
+            echo '<button class="close-btn" onclick="closeModal()">Close</button>';
+            echo '</div>';
+            echo '</div>';
+            echo '<script>document.getElementById("registrationModal").style.display = "flex";</script>';
         }
 
         $conn->close();
     }
+
+    // JavaScript function to close the modal
+    echo '<script>';
+    echo 'function closeModal() {';
+    echo 'document.getElementById("registrationModal").style.display = "none";';
+    echo '}';
+    echo '</script>';
 ?>
+</body>
+</html>

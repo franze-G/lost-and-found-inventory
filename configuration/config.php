@@ -9,4 +9,5 @@ $conn = new mysqli($inventoryServername, $inventoryUsername, $inventoryPassword,
 if ($conn->connect_error) {
     die("Inventory Connection Error: " . $conn->connect_error);
 }
+?>
 

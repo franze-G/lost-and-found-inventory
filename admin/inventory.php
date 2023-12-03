@@ -93,12 +93,15 @@
                             echo '<td>' . date('M d, Y', strtotime($row['registerdate'])) . '</td>';
                             // Apply the class to the <td> for status
                             echo '<td class="' . $statusClass . '">' . $row['status'] . '</td>';
-                            echo '<td><a class="retrieve" href="retrieve.php">Retrieve Item</a></td>';
+                            // Replace this line in the table body
+                            echo '<td><a class="retrieve" href="retrieve.php?id=' . $row['id'] . '">Retrieve Item</a></td>';
                             echo '<td><a class="details" href="">view item</a></td>';
                             echo '</tr>';
                         }
                     }
                 ?>
+
+
             </tbody>
         </table>
       
@@ -110,10 +113,7 @@
         <a href="inventory.php"><i class="material-icons grid_view">storage</i></a>
 
         </li>
-        <li>
-        <a href="retrieve.php"><i class="material-icons grid_view">output</i></a>  
-            
-        </li>
+        
         <li>
             <a href="register.php"><i class="material-icons grid_view">library_add</i></a>
         </li>
