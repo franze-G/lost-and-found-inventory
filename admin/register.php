@@ -91,7 +91,7 @@
                 </div>
                 
             <label class="labs">Upload image here</label>
-                <input type="file" name="fileupload" id="fileupload">
+                <input type="file" name="image" id="fileupload">
 
             <div class="btn-field">
                     <input type="submit" name="submit" value="REGISTER">
