@@ -118,6 +118,10 @@
         <li>
             <a href="account.php"><i class="material-icons grid_view">person_add</i></a>
         </li>
+
+        <li>
+            <a href="report.php"><i class="material-icons grid_view">report</i></a>
+        </li>
         </ul>
         </div>
     </div>

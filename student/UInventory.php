@@ -75,10 +75,7 @@
         <a href="UInventory.php"><i class="material-icons grid_view">storage</i></a>
 
         </li>
-        <li>
-        <a href="Uretrieve.php"><i class="material-icons grid_view">output</i></a>  
-            
-        </li>
+     
         <li>
             <a href="Uregister.php"><i class="material-icons grid_view">library_add</i></a>
         </li>

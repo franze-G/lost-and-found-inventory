@@ -20,15 +20,11 @@
 
         <ul class="nav">
         <li>
-            <a href="user.php"><i class="material-icons grid_view">grid_view</i></a>
+            <a href="../admin/user.php"><i class="material-icons grid_view">grid_view</i></a>
         </li>
 
         <li>
         <a href="UInventory.php"><i class="material-icons grid_view">storage</i></a>
-        </li>
-
-        <li>
-        <a href="Uretrieve.php"><i class="material-icons grid_view">output</i></a>   
         </li>
 
         <li>

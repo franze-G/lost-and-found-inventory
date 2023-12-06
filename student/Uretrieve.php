@@ -46,20 +46,17 @@
         </div>
         <ul class="nav">
         <li>
-            <a href="dashboard.php"><i class="material-icons grid_view">grid_view</i></a>
+            <a href="../admin/user.php"><i class="material-icons grid_view">grid_view</i></a>
         </li>
 
         <li>
-        <a href="inventory.php"><i class="material-icons grid_view">storage</i></a>
+        <a href="UInventory.php"><i class="material-icons grid_view">storage</i></a>
         </li>
     
         <li>
-            <a href="register.php"><i class="material-icons grid_view">library_add</i></a>
+            <a href="Uregister.php"><i class="material-icons grid_view">library_add</i></a>
         </li>
-        
-        <li>
-            <a href="account.php"><i class="material-icons grid_view">person_add</i></a>
-        </li>
+  
         </ul>
 
         <div class="search">
