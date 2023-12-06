@@ -71,18 +71,18 @@ include('../configuration/config.php');
         </li>
         <li>
         <a href="inventory.php"><i class="material-icons grid_view">storage</i></a>
-           
         </li>
-        <li>
-        <a href="retrieve.php"><i class="material-icons grid_view">output</i></a>  
-            
-        </li>
+        
         <li>
             <a href="register.php"><i class="material-icons grid_view">library_add</i></a>
         </li>
 
         <li>
             <a href="account.php"><i class="material-icons grid_view">person_add</i></a>
+        </li>
+
+        <li>
+            <a href="report.php"><i class="material-icons grid_view">report</i></a>
         </li>
         </ul>
 
@@ -119,13 +119,12 @@ include('../configuration/config.php');
             <label class="labelss">Password</label>  
             <div class="input-field">
                 <select name="type"  placeholder="Category of item">
-                    <option value="" disabled selected>Select category of item</option>
+                    <option value="" disabled selected>Select type of user</option>
                     <option value="1">ADMIN</option>
                     <option value="2">STUDENT</option>
                 </select>
             </div>
-
-
+            
             <div class="btn-field">
                     <input type="submit" name="submit" value="REGISTER">
             </div> 

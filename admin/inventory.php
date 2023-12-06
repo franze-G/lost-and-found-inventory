@@ -95,7 +95,7 @@
                             echo '<td class="' . $statusClass . '">' . $row['status'] . '</td>';
                             // Replace this line in the table body
                             echo '<td><a class="retrieve" href="retrieve.php?id=' . $row['id'] . '">Retrieve Item</a></td>';
-                            echo '<td><a class="details" href="">view item</a></td>';
+                            echo '<td><a class="details" href="details.php?id=' . $row['id'] . '">View Item Details</a></td>';
                             echo '</tr>';
                         }
                     }
@@ -119,6 +119,10 @@
         </li>
         <li>
             <a href="account.php"><i class="material-icons grid_view">person_add</i></a>
+        </li>
+
+        <li>
+            <a href="report.php"><i class="material-icons grid_view">report</i></a>
         </li>
         </ul>
         </div>

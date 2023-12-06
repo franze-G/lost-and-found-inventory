@@ -58,8 +58,8 @@
                             echo '<td>' . $row['color'] . '</td>';
                             // Apply the class to the <td> for status
                             echo '<td class="' . $statusClass . '">' . $row['status'] . '</td>';
-                            echo '<td><a class="retrieve" href="retrieve.php">Retrieve Item</a></td>';
-                            echo '<td><a class="details" href="">view item</a></td>';
+                            echo '<td><a class="retrieve" href="Uretrieve.php?id=' . $row['id'] . '">Retrieve Item</a></td>';
+                            echo '<td><a class="details" href="Udetails.php?id=' . $row['id'] . '">View Item Details</a></td>';
                             echo '</tr>';
                         }
                     }
@@ -75,10 +75,7 @@
         <a href="UInventory.php"><i class="material-icons grid_view">storage</i></a>
 
         </li>
-        <li>
-        <a href="Uretrieve.php"><i class="material-icons grid_view">output</i></a>  
-            
-        </li>
+     
         <li>
             <a href="Uregister.php"><i class="material-icons grid_view">library_add</i></a>
         </li>

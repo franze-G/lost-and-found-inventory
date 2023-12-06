@@ -88,7 +88,7 @@
         </li>
 
         <li>
-        <a href="inventory.php"> <i class="material-icons grid_view">storage</i> Inventory</a>
+        <a href="inventory.php"> <i class="material-icons grid_view">storage</i>Inventory</a>
       
         </li>
 
@@ -101,7 +101,7 @@
         </li>
 
         <li>
-            <a href="account.php"><i class="material-icons grid_view">report</i>Report Item</a>
+            <a href="report.php"><i class="material-icons grid_view">report</i>Report Item</a>
         </li>
 
         <li>

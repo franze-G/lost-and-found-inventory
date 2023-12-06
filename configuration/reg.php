@@ -66,8 +66,17 @@
         // Set the status to "registered"
         $stats = 'REGISTERED';
 
-        $sql = "INSERT INTO `register` (`serial`, `fullname`, `studentnum`, `course`, `category`, `itemname`, `itemtype`, `color`,`registerdate`, `status`, `email`)
-        VALUES ('$serialNumber', '$fname', '$studentnum', '$course', '$category', '$itemname', '$itemtype', '$colors', '$regdate', '$stats', '$email')";
+        if (isset($_FILES["image"])) {
+            // File Upload Handling
+            $uploadDirectory = "../Item/";
+            $uploadedFilename = "image" . uniqid() . "_" . basename($_FILES["image"]["name"]);
+            $targetPath = $uploadDirectory . $uploadedFilename;
+
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetPath)) {
+
+
+                $sql = "INSERT INTO `register` (`serial`, `fullname`, `studentnum`, `course`, `category`, `itemname`, `itemtype`, `color`,`registerdate`, `status`, `email`,`image`)
+                VALUES ('$serialNumber', '$fname', '$studentnum', '$course', '$category', '$itemname', '$itemtype', '$colors', '$regdate', '$stats', '$email','$targetPath')";
 
         $result = $conn->query($sql);
 
@@ -93,16 +102,11 @@
             echo '</div>';
             echo '<script>document.getElementById("registrationModal").style.display = "flex";</script>';
         }
+    }
 
         $conn->close();
     }
-
-    // JavaScript function to close the modal
-    echo '<script>';
-    echo 'function closeModal() {';
-    echo 'document.getElementById("registrationModal").style.display = "none";';
-    echo '}';
-    echo '</script>';
+}
 ?>
 </body>
 </html>
