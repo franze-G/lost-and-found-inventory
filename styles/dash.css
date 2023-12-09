@@ -43,21 +43,6 @@
     box-shadow: -4px 10px 20px 0px #808080;
 }
 
-.search{
-    position: absolute;
-    top: 38%;
-    left: 68%;
-    width: 90%;
-    height: 48%;
-    max-width: 300px;
-    background:#fff;
-    transform: translate(-50%,-50%);
-    padding: 50px 50px 70px;
-    text-align: center;
-    border-radius: 40px;
-    box-shadow: -4px 10px 20px 0px #808080;
-}
-
 .menu{
     position: absolute;
     top: 50%;
@@ -82,14 +67,6 @@
     margin: -24px -18px;
     color: #007F42;
     font-size: 24px;
-}
-
-.searchitm{
-    position: absolute;
-    left: 108px;
-    top: 30px;
-    color: #000;
-    font-size: 20px;
 }
 
 ul.nav {
@@ -233,14 +210,6 @@ i.found_item{
     left: 34px;
     top: 60px;
     font-size: 30px;
-}
-
-i.search_item{   
-    color: #000;
-    position: absolute;
-    left: 76px;
-    top: 28px;
-    font-size: 24px;
 }
 
 /* Your existing styles */

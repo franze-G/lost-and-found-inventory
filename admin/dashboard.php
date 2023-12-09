@@ -121,23 +121,7 @@
             <p class="found_count"><?php echo $foundItemCount; ?></p>
         </div>
 
-        <div class="search">
-            <h1 class="searchitm">Search item</h1>
-            <i class="material-icons search_item">manage_search</i>
-            <div class="input-field">
-                <input type="text" name="itemtype" id="itemtype" placeholder="Type of item">
-            </div>
-
-            <div class="input-field">
-                <input type="text" name="itemtype" id="itemtype" placeholder="Category">
-            </div>
-
-            <div class="input-field">
-                <input type="date" name="itemtype" id="itemtype" placeholder="Month">
-            </div>
-            <div class="btn-field">
-                    <button type="submit">SEARCH</button>
-            </div>  
+          
         </div>
     </div>
 </body>
