@@ -131,6 +131,7 @@ $conn->close();
             <p class="found_count"><?php echo $foundItemCount; ?></p>
         </div>
 
+          
         <div class="search">
             <h1 class="searchitm">Inventory Items</h1>
             <i class="material-icons search_item"></i>
