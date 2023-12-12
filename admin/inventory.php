@@ -66,7 +66,7 @@
                     <th>Item name</th>
                     <th>Type of Item</th>
                     <th>Color</th>
-                    <th>Date of Claim</th>
+                    <th>Date of Lost</th>
                     <th>Date Registered</th>
                     <th>Status</th>
                     <th>Action</th>
@@ -89,7 +89,7 @@
                             echo '<td>' . $row['itemname'] . '</td>';
                             echo '<td>' . $row['itemtype'] . '</td>';
                             echo '<td>' . $row['color'] . '</td>';
-                            echo '<td>' . (empty($row['claimdate']) ? 'N/A' : $row['claimdate']) . '</td>';
+                            echo '<td>' . (empty($row['lostdate']) ? 'N/A' : $row['lostdate']) . '</td>';
                             echo '<td>' . date('M d, Y', strtotime($row['registerdate'])) . '</td>';
                             // Apply the class to the <td> for status
                             echo '<td class="' . $statusClass . '">' . $row['status'] . '</td>';

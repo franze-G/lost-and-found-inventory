@@ -55,6 +55,7 @@
 
                     // Now you can use $row to access the details of the selected item
                     $itemID = $row['id'];
+                    $fname = $row['fullname'];
                     $serial = $row['serial'];
                     $category = $row['category'];
                     $itemname = $row['itemname'];
@@ -67,7 +68,8 @@
 
                     // Add the HTML and formatting to display the item details and image
                     echo '<p class="details">Item ID: ' . $itemID . '</p>';
-                    echo '<p class="details">Serial NO.: ' . $serial . '</p>';
+                    echo '<p class="details">Owner: ' . $fname . '</p>';
+                    echo '<p class="details">Serial #: ' . $serial . '</p>';
                     echo '<p class="details">Category: ' . $category . '</p>';
                     echo '<p class="details">Item Name: ' . $itemname . '</p>';
                     echo '<p class="details">Type of Item: ' . $itemtype . '</p>';

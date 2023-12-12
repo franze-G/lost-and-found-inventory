@@ -74,12 +74,24 @@
             <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
             <label class="labels">Fullname</label>
             <div class="input-field">
-                <input type="text" name="fullname" id="fullname" value="<?php echo $item['fullname']; ?>" placeholder="Enter Fulname">
+                <input 
+                type="text" 
+                name="fullname" 
+                id="fullname" 
+                value="<?php echo $item['fullname']; ?>" 
+                placeholder="Enter Fulname"
+                readonly>
             </div>
 
             <label class="labels">Student number</label>
             <div class="input-field">
-                <input type="text" name="studentnum" id="studentnum"  value="<?php echo $item['studentnum']; ?>"placeholder="Enter Student number">
+                <input 
+                type="text" 
+                name="studentnum" 
+                id="studentnum"  
+                value="<?php echo $item['studentnum']; ?>"
+                placeholder="Enter Student number"
+                readonly>
             </div>
 
             <label class="labels">Serial Number</label>
@@ -89,7 +101,13 @@
 
             <label class="labelss">Item Color</label>
             <div class="input-field">
-                <input type="text" name="type" id="type"  value="<?php echo $item['itemtype']; ?>"placeholder="Enter type of item">
+                <input 
+                type="text" 
+                name="type" 
+                id="type"  
+                value="<?php echo $item['itemtype']; ?>"
+                placeholder="Enter type of item"
+                readonly>
             </div>
 
             <label class="labelss">Type of Item</label>
@@ -103,12 +121,23 @@
 
             <label class="labelss">Category</label>
             <div class="input-field">
-                <input type="text" name="itemname" id="itemname"  value="<?php echo $item['color']; ?>"placeholder="Enter color">
+                <input 
+                type="text" 
+                name="itemname" 
+                id="itemname"  
+                value="<?php echo $item['color']; ?>"
+                placeholder="Enter color"
+                readonly>
             </div>
 
             <label class="labe">Date of Claim</label>
             <div class="input-field">
-                <input type="email" name="email" id="email" value="<?php echo $item['email']; ?>">
+                <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                value="<?php echo $item['email']; ?>"
+                readonly>
             </div>
 
             <label class="labe">Email</label>

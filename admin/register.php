@@ -1,7 +1,3 @@
-<?php
-   
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +91,7 @@
                 </div>
                 
             <label class="labs">Upload image here</label>
-                <input type="file" name="image" id="fileupload">
+                <input type="file" name="image" id="fileupload" required>
 
             <div class="btn-field">
                     <input type="submit" name="submit" value="REGISTER">

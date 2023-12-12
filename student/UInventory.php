@@ -79,6 +79,10 @@
         <li>
             <a href="Uregister.php"><i class="material-icons grid_view">library_add</i></a>
         </li>
+
+        <li>
+            <a href="Ureport.php"><i class="material-icons grid_view">report</i></a>
+        </li>
         </ul>
         </div>
     </div>

@@ -1,47 +1,48 @@
 <?php
     include('../configuration/config.php');
-
     
-    if(isset($_COOKIE['token'])){
-        $id=$_COOKIE['token'];
-
-        $sql ="SELECT account.*, user.fullname
-               FROM account 
-               JOIN user ON account.id = user.id 
-               WHERE account.id=$id";
-
-            if($rs=$conn->query($sql)){
-                if($rs->num_rows>0){
-                    $row=$rs->fetch_assoc();
-                    $usertype=$row['user_type'];
-                    $userid=$row['id'];
-                    $fname=$row['fullname']; // Add this line to get the user's first name
-            // Add this line to get the user's last name
-                    switch($usertype){
-                    case 1 : header("location:"); break;
-
-                    //case 2 : header("location:../student/user.php"); break;
-                    }
-                }else{
-                    //token not exist
-                    header("location:login.php");
+    if (isset($_COOKIE['token'])) {
+        $id = $_COOKIE['token'];
+    
+        $sql = "SELECT account.*, user.fullname
+                FROM account 
+                JOIN user ON account.id = user.id 
+                WHERE account.id = $id";
+    
+        if ($rs = $conn->query($sql)) {
+            if ($rs->num_rows > 0) {
+                $row = $rs->fetch_assoc();
+                $usertype = $row['user_type'];
+                $userid = $row['id'];
+                $fname = $row['fullname'];
+    
+                switch ($usertype) {
+                    case 1:
+                        header("location:");
+                        break;
                 }
-                }
-                else{
-                    echo $conn->error;
-                }
-            }else{
+            } else {
+                // token not exist
                 header("location:login.php");
             }
-            
+        } else {
+            echo $conn->error;
+        }
+    } else {
+        header("location:login.php");
+    }
+    
     // Query to count the number of lost items
     $lostItemsQuery = "SELECT COUNT(*) AS lostItemCount FROM register WHERE status = 'LOST'";
     $lostItemsResult = $conn->query($lostItemsQuery);
-
+    
     // Query to count the number of found items
     $foundItemsQuery = "SELECT COUNT(*) AS foundItemCount FROM register WHERE status = 'FOUND'";
     $foundItemsResult = $conn->query($foundItemsQuery);
-
+    
+    $inventoryItemsQuery = "SELECT COUNT(*) AS inventoryItemCount FROM register";
+    $inventoryItemsResult = $conn->query($inventoryItemsQuery);
+    
     // Check if the query for lost items was successful
     if ($lostItemsResult) {
         $lostItemsRow = $lostItemsResult->fetch_assoc();
@@ -50,7 +51,7 @@
         // Handle the error if the query for lost items fails
         $lostItemCount = 0;
     }
-
+    
     // Check if the query for found items was successful
     if ($foundItemsResult) {
         $foundItemsRow = $foundItemsResult->fetch_assoc();
@@ -59,9 +60,19 @@
         // Handle the error if the query for found items fails
         $foundItemCount = 0;
     }
-
+    
+    // Check if the query for inventory items was successful
+    if ($inventoryItemsResult) {
+        $inventoryItemsRow = $inventoryItemsResult->fetch_assoc();
+        $inventoryItemCount = $inventoryItemsRow['inventoryItemCount'];
+    } else {
+        // Handle the error if the query for inventory items fails
+        $inventoryItemCount = 0;
+    }
+    
     $conn->close();
-?>
+    ?>
+    
 
 
 <!DOCTYPE html>
@@ -95,6 +106,10 @@
         <li>
             <a href="../student/Uregister.php"><i class="material-icons grid_view">library_add</i>Register Item</a>
         </li>
+        
+        <li>
+            <a href="../student/Ureport.php"><i class="material-icons grid_view">report</i>Report Item</a>
+        </li>
 
         <li>
             <a href="logout.php"><i class="material-icons grid_view">logout</i>Logout</a>
@@ -114,22 +129,9 @@
         </div>
 
         <div class="search">
-            <h1 class="searchitm">Search item</h1>
-            <i class="material-icons search_item">manage_search</i>
-            <div class="input-field">
-                <input type="text" name="itemtype" id="itemtype" placeholder="Type of item">
-            </div>
-
-            <div class="input-field">
-                <input type="text" name="itemtype" id="itemtype" placeholder="Category">
-            </div>
-
-            <div class="input-field">
-                <input type="date" name="itemtype" id="itemtype" placeholder="Month">
-            </div>
-            <div class="btn-field">
-                    <button type="submit">SEARCH</button>
-            </div>  
+            <h1 class="searchitm">Inventory Items</h1>
+            <i class="material-icons search_item"></i>
+            <p class="found_counts"><?php echo $inventoryItemCount; ?></p>
         </div>
     </div>
 </body>

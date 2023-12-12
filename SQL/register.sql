@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2023 at 08:24 AM
+-- Generation Time: Dec 12, 2023 at 02:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,20 +39,18 @@ CREATE TABLE `register` (
   `color` varchar(100) NOT NULL,
   `registerdate` date NOT NULL,
   `lostdate` date NOT NULL,
+  `founddate` date NOT NULL,
   `status` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL
+  `email` varchar(100) NOT NULL,
+  `image` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `register`
 --
 
-INSERT INTO `register` (`id`, `serial`, `fullname`, `studentnum`, `course`, `itemtype`, `itemname`, `category`, `color`, `registerdate`, `lostdate`, `status`, `email`) VALUES
-(65, 'V54461744', 'RJ CRUZ', '202119379', 'BS CPSCI', 'CELLPHONE', 'IP XR', 'VALUABLE', 'BLACK', '2023-11-27', '2023-11-30', 'LOST', 'carl@gmail.com'),
-(66, 'NV97769415', 'RYU', '202014886', 'BS CPSCI', 'TUMBLER', 'AQUAFLASK', 'NON-VALUABLE', 'WHITE', '2023-11-28', '2023-11-30', 'LOST', 'franze@gmail.com'),
-(67, 'V67988168', 'RJ CRUZ', '2020199', 'BS NURSING', 'CELLPHONE', 'IP 15PRO', 'VALUABLE', 'TITANIUM ', '2023-11-30', '2023-12-01', 'FOUND', 'rj@gmail.com'),
-(72, 'V90552728', 'franze garcia', '202119379', 'BS ACCOUNTANCY', 'CELLPHONE', 'IPHONE', 'VALUABLE', 'BLACK', '2023-12-02', '0000-00-00', '', 'franze.dg@yahoo.com'),
-(74, 'V15553407', 'JAPS MENDOZA', '202010291', 'BS IT', 'CELLPHONE', 'IP 15 PRO', 'VALUABLE', 'BLACK', '2023-12-02', '0000-00-00', 'REGISTERED', 'franze.garcia@gmail.com');
+INSERT INTO `register` (`id`, `serial`, `fullname`, `studentnum`, `course`, `itemtype`, `itemname`, `category`, `color`, `registerdate`, `lostdate`, `founddate`, `status`, `email`, `image`) VALUES
+(80, 'V52054455', 'FRANZE', '2023090', 'BS CPSCIE', 'CELLPHONE', 'IP 15PRO', 'VALUABLE', 'BLACK', '2023-12-12', '0000-00-00', '2023-12-13', 'FOUND', 'franze@gmail.com', '../Item/image657744103cb9c_daily.jpg');
 
 --
 -- Indexes for dumped tables
@@ -72,7 +70,7 @@ ALTER TABLE `register`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
