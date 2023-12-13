@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2023 at 02:05 PM
+-- Generation Time: Dec 13, 2023 at 04:05 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,15 +42,17 @@ CREATE TABLE `register` (
   `founddate` date NOT NULL,
   `status` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `image` varchar(500) NOT NULL
+  `image` varchar(500) NOT NULL,
+  `claimdate` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `register`
 --
 
-INSERT INTO `register` (`id`, `serial`, `fullname`, `studentnum`, `course`, `itemtype`, `itemname`, `category`, `color`, `registerdate`, `lostdate`, `founddate`, `status`, `email`, `image`) VALUES
-(80, 'V52054455', 'FRANZE', '2023090', 'BS CPSCIE', 'CELLPHONE', 'IP 15PRO', 'VALUABLE', 'BLACK', '2023-12-12', '0000-00-00', '2023-12-13', 'FOUND', 'franze@gmail.com', '../Item/image657744103cb9c_daily.jpg');
+INSERT INTO `register` (`id`, `serial`, `fullname`, `studentnum`, `course`, `itemtype`, `itemname`, `category`, `color`, `registerdate`, `lostdate`, `founddate`, `status`, `email`, `image`, `claimdate`) VALUES
+(80, 'V52054455', 'FRANZE', '2023090', 'BS CPSCIE', 'CELLPHONE', 'IP 15PRO', 'VALUABLE', 'BLACK', '2023-12-12', '2023-12-13', '0000-00-00', 'CLAIMED', 'franze@gmail.com', '../Item/image657744103cb9c_daily.jpg', '2023-12-15'),
+(81, 'V53326123', 'FRANZE', '2032909', 'BS NURSING', 'CELLPHONE', 'IP XR', 'VALUABLE', 'GREY', '2023-12-14', '2023-12-13', '0000-00-00', 'CLAIMED', 'franze@gmail.com', '../Item/image65790d8f995cc_sublte.jpg', '2023-12-13');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +72,7 @@ ALTER TABLE `register`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
