@@ -207,7 +207,7 @@ select {
     width: 95%;
     border-collapse: collapse;
     margin-left: 60px;
-    margin-top: 60px;
+    margin-top: 70px;
     
 }
 
@@ -308,7 +308,7 @@ a.details:hover{
 
 .dataTables_wrapper {
     position: relative;
-    top: 6px;
+    top: 10px;
     left: 20px;
     margin: 50px 40px;
     padding: 4px; /* Adjust as needed */

@@ -61,7 +61,7 @@
                     $itemname = $row['itemname'];
                     $itemtype = $row['itemtype'];
                     $color = $row['color'];
-                    $claimdate = empty($row['claimdate']) ? 'N/A' : $row['claimdate'];
+                    $claimdate = empty($row['claimdate']) ? 'N/A' : date('M d, Y', strtotime($row['claimdate']));
                     $registerdate = date('M d, Y', strtotime($row['registerdate']));
                     $status = $row['status'];
                     $imagePath = $row['image']; // Assuming 'image_path' is the column storing the file path or URL

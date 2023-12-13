@@ -1,37 +1,3 @@
-<?php
-    include('../configuration/config.php');
-
-    $conn = new mysqli($inventoryServername, $inventoryUsername, $inventoryPassword, $inventoryDbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Check if the form is submitted
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Check if the submit button is clicked
-        if (isset($_POST["submit"])) {
-            // Get the values from the form
-            $serial = $_POST["serial"];
-            $status = $_POST["status"];
-            $lostdate = $_POST["lostdate"];
-
-            // Update the status in the database
-            $sql = "UPDATE register SET `status` = '$status', `lostdate` = '$lostdate' WHERE `serial` = '$serial'";
-
-            if ($conn->query($sql) === TRUE) {
-                echo "Status updated successfully.";
-            } else {
-                echo "Error updating status: " . $conn->error;
-            }
-        }
-    }
-
-    $conn->close();
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +34,7 @@
         <div class="search">
             <h1 class="searchitm">Item Report</h1>
 
-            <form action ="" method="post" enctype="multipart/form-data">
+            <form action ="../configuration/Ureport.php" method="post" enctype="multipart/form-data">
 
             <label class="labels">Serial Number</label>
             <div class="input-field">
@@ -91,7 +57,7 @@
             
             <label class="labels">Date of Found</label>
             <div class="input-field">
-                <input type="date" name="lostdate" id="lostdate" placeholder="Enter item serial number">
+                <input type="date" name="founddate" id="lostdate" placeholder="Enter item serial number">
             </div>
             
             <div class="btn-field">

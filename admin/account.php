@@ -1,54 +1,4 @@
-<?php
-include('../configuration/config.php');
 
-    if (isset($_POST['submit'])) {
-        $fname = $_POST['fullname'];
-        $studentno = $_POST['studentnum'];
-        $email = $_POST['email'];
-        $course = $_POST['course'];
-        $type = $_POST['type'];
-        $pass = md5($_POST['password']); // Add this line to get the password from the form
-
-        $checkSql = "SELECT * FROM `user` 
-                    WHERE (`fullname` = '$fname' AND `student_number` != '$studentno') 
-                    AND (`fullname` != '$fname' AND `student_number` = '$studentno')";
-                    
-                    $checkResult = $conn->query($checkSql);
-    
-                    if ($checkResult->num_rows > 0) {
-                            echo "Account Already Exist.";
-                    } else {
-                    // Insert user data into 'user' table
-                    $userSql = "INSERT INTO `user` (`fullname`, `student_number`, `email`, `course`)
-                                VALUES ('$fname', '$studentno', '$email', '$course')";
-                
-                    $userResult = $conn->query($userSql);
-                
-                    if ($userResult === TRUE) {
-                        echo "User record successfully submitted.";
-                        
-                        // Get the user ID of the inserted user
-                        $userId = $conn->insert_id;
-                
-                        // Insert account data into 'account' table with the user ID as a foreign key
-                        $accountSql = "INSERT INTO `account` (`id`, `username`, `pass`,`user_type`)
-                                    VALUES ('$userId', '$studentno', '$pass','$type')";
-                
-                        $accountResult = $conn->query($accountSql);
-                
-                        if ($accountResult === TRUE) {
-                            echo "Account record successfully submitted.";
-                        } else {
-                            echo "Error: " . $accountSql . "<br>" . $conn->error;
-                        }
-                    } else {
-                        echo "Error: " . $userSql . "<br>" . $conn->error;
-                    }
-                }
-
-                $conn->close();
-            }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +39,7 @@ include('../configuration/config.php');
         <div class="search">
             <h1 class="searchitm">Account Registration</h1>
 
-            <form action ="" method="post" enctype="multipart/form-data">
+            <form action ="../configuration/account.php" method="post" enctype="multipart/form-data">
 
             <label class="labels">Fullname</label>
             <div class="input-field">

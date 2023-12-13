@@ -89,7 +89,7 @@
                             echo '<td>' . $row['itemname'] . '</td>';
                             echo '<td>' . $row['itemtype'] . '</td>';
                             echo '<td>' . $row['color'] . '</td>';
-                            echo '<td>' . (empty($row['lostdate']) ? 'N/A' : $row['lostdate']) . '</td>';
+                            echo '<td>' . (empty($row['lostdate']) ? 'N/A' : date('M d Y', strtotime($row['lostdate']))) . '</td>';
                             echo '<td>' . date('M d, Y', strtotime($row['registerdate'])) . '</td>';
                             // Apply the class to the <td> for status
                             echo '<td class="' . $statusClass . '">' . $row['status'] . '</td>';

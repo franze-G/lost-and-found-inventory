@@ -1,32 +1,60 @@
 <?php
-    
     include('../configuration/config.php');
-        // Retrieve the item ID from the URL
-        $itemId = $_GET['id'] ?? null;
 
-        // Check if the ID is provided
-        if ($itemId !== null) {
-            // Retrieve item details based on ID
-            $sql = "SELECT * FROM register WHERE id = $itemId";
-            $result = $conn->query($sql);
+    // Retrieve the item ID from the URL
+    $itemId = $_GET['id'] ?? null;
+    $claim = isset($_POST['claimdate']) ? $_POST['claimdate'] : '';
 
-            // Check if the query was successful
-            if ($result->num_rows > 0) {
-                // Fetch item details
-                $item = $result->fetch_assoc();
+    // Check if the ID is provided
+    if ($itemId !== null) {
+        // Retrieve item details based on ID
+        $sql = "SELECT * FROM register WHERE id = $itemId";
+        $result = $conn->query($sql);
 
-                // Close the result set
-                $result->close();
-            } else {
-                // Item not found, handle the error or redirect
-                header("location: inventory.php");
-                exit();
-            }
+        // Check if the query was successful
+        if ($result->num_rows > 0) {
+            // Fetch item details
+            $item = $result->fetch_assoc();
+
+            // Close the result set
+            $result->close();
         } else {
-            // ID not provided, handle the error or redirect
-            header("location: inventory.php");
+            // Item not found, handle the error or redirect
+            header("location: UInventory.php");
             exit();
         }
+    } else {
+        // ID not provided, handle the error or redirect
+        header("location: UInventory.php");
+        exit();
+    }
+
+    // Initialize error and success messages
+    $errorMessage = '';
+    $successMessage = 'Retrieve item sucessfully.';
+
+    // Check if the form is submitted
+    if (isset($_POST['submit'])) {
+        // Retrieve serial number from the form
+        $enteredSerial = $_POST['serial'];
+
+        // Check if the entered serial number matches the item's serial number
+        if ($enteredSerial === $item['serial']) {
+            // Update the item status to "claimed" in the database
+            $updateSql = "UPDATE register SET status = 'CLAIMED',  `claimdate`='$claim' WHERE id = $itemId";
+            $conn->query($updateSql);
+
+            // Set success message
+            echo "Item successfully retrieved!";
+
+            // Redirect to inventory or any other page
+            header("location: UInventory.php");
+            exit();
+        } else {
+            // Serial number doesn't match, handle the error or display a message
+            $errorMessage = "Serial number does not match. Please try again.";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -46,33 +74,52 @@
         </div>
         <ul class="nav">
         <li>
-            <a href="../admin/user.php"><i class="material-icons grid_view">grid_view</i></a>
+            <a href="dashboard.php"><i class="material-icons grid_view">grid_view</i></a>
         </li>
 
         <li>
-        <a href="UInventory.php"><i class="material-icons grid_view">storage</i></a>
+        <a href="inventory.php"><i class="material-icons grid_view">storage</i></a>
         </li>
     
         <li>
-            <a href="Uregister.php"><i class="material-icons grid_view">library_add</i></a>
+            <a href="register.php"><i class="material-icons grid_view">library_add</i></a>
         </li>
-  
+        
+        <li>
+            <a href="account.php"><i class="material-icons grid_view">person_add</i></a>
+        </li>
+
+        <li>
+            <a href="report.php"><i class="material-icons grid_view">report</i></a>
+        </li>
         </ul>
 
         <div class="search">
             <h1 class="searchitm">Retrieve Item</h1>
 
-            <form action ="../configuration/retrieve.php" method="post" enctype="multipart/form-data">
+            <form action ="" method="post" enctype="multipart/form-data">
 
             <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
             <label class="labels">Fullname</label>
             <div class="input-field">
-                <input type="text" name="fullname" id="fullname" value="<?php echo $item['fullname']; ?>" placeholder="Enter Fulname">
+                <input 
+                type="text" 
+                name="fullname" 
+                id="fullname" 
+                value="<?php echo $item['fullname']; ?>" 
+                placeholder="Enter Fulname"
+                readonly>
             </div>
 
             <label class="labels">Student number</label>
             <div class="input-field">
-                <input type="text" name="studentnum" id="studentnum"  value="<?php echo $item['studentnum']; ?>"placeholder="Enter Student number">
+                <input 
+                type="text" 
+                name="studentnum" 
+                id="studentnum"  
+                value="<?php echo $item['studentnum']; ?>"
+                placeholder="Enter Student number"
+                readonly>
             </div>
 
             <label class="labels">Serial Number</label>
@@ -82,7 +129,13 @@
 
             <label class="labelss">Item Color</label>
             <div class="input-field">
-                <input type="text" name="type" id="type"  value="<?php echo $item['itemtype']; ?>"placeholder="Enter type of item">
+                <input 
+                type="text" 
+                name="type" 
+                id="type"  
+                value="<?php echo $item['itemtype']; ?>"
+                placeholder="Enter type of item"
+                readonly>
             </div>
 
             <label class="labelss">Type of Item</label>
@@ -96,12 +149,23 @@
 
             <label class="labelss">Category</label>
             <div class="input-field">
-                <input type="text" name="itemname" id="itemname"  value="<?php echo $item['color']; ?>"placeholder="Enter color">
+                <input 
+                type="text" 
+                name="itemname" 
+                id="itemname"  
+                value="<?php echo $item['color']; ?>"
+                placeholder="Enter color"
+                readonly>
             </div>
 
             <label class="labe">Date of Claim</label>
             <div class="input-field">
-                <input type="email" name="email" id="email" value="<?php echo $item['email']; ?>">
+                <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                value="<?php echo $item['email']; ?>"
+                readonly>
             </div>
 
             <label class="labe">Email</label>
@@ -111,7 +175,7 @@
 
             <label class="labe">Date of Lost</label>
             <div class="input-field">
-                <input type="date" name="lostdate" id="lostdate" value="Date of Lost">
+                <input type="date" name="claimdate" id="lostdate" value="Date of Lost">
             </div>
 
 
